@@ -5,9 +5,9 @@ const source      = require('vinyl-source-stream');
 const browserSync = require('browser-sync');
 const runSequence = require('run-sequence');
 
-/** Bundle JavaScript sources by Watchify */
+/** Compile & Bundle TypeScript sources by Watchify */
 gulp.task('script', () => {
-    const b= browserify({
+    const b = browserify({
         cache: {},
         packageCache: {},
         debug: true

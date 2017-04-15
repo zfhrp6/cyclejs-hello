@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Compile TypeScript sources
-nohup browserify -d src/scripts/main.ts -p [ tsify ] -o public/main.js &
+nohup watchify -d src/scripts/main.ts -p [ tsify ] -o public/main.js &
 browserify_pid=$!
 trap "kill -15 $browserify_pid $>/dev/null" 2 15
 
