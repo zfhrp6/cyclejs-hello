@@ -2,7 +2,7 @@
 
 [リアクティブ・プログラミングに特化した JS フレームワーク Cycle.js を学ぼう #1 – 導入編 – NET BIZ DIV. TECH BLOG](https://tech.recruit-mp.co.jp/front-end/post-11898/) にて紹介しているサンプルコードです。
 
-
+![cycle_basic_demo](https://cloud.githubusercontent.com/assets/2629981/25068719/dfa9e362-22a7-11e7-9974-d23adcd7f534.gif)
 
 ## Requirement
 - Node.js v7.8.0
