@@ -2,33 +2,34 @@
 # yarn lockfile v1
 
 
-"@cycle/dom@^17.1.0":
-  version "17.6.0"
-  resolved "https://registry.yarnpkg.com/@cycle/dom/-/dom-17.6.0.tgz#4512be5e5cd1ce90fa00e5674a31d0c2957a481d"
+"@cycle/dom@^20.4.0":
+  version "20.4.0"
+  resolved "https://registry.yarnpkg.com/@cycle/dom/-/dom-20.4.0.tgz#a309ce7f4ac0df74b7b1876583ccc7349bf99a6a"
   dependencies:
-    "@cycle/run" "*"
+    "@cycle/run" "4.0.0"
     es6-map "^0.1.4"
-    snabbdom "0.6.9"
-    snabbdom-selector "1.2.0"
+    snabbdom "0.7.0"
+    snabbdom-selector "^3.0.0"
+    xstream "11.x"
 
-"@cycle/run@*":
+"@cycle/run@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@cycle/run/-/run-4.0.0.tgz#d48c5133cd783afdf7f9e37ce1c158b570d6c5f1"
+  dependencies:
+    xstream "10.x || 11.x"
+
+"@cycle/run@4.x", "@cycle/run@^4.1.0":
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/@cycle/run/-/run-4.1.0.tgz#b164a83792e85db3c184236f4b3800a4c9bf6f76"
   dependencies:
     xstream "10.x || 11.x"
 
-"@cycle/run@3.4", "@cycle/run@^3.1.0":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@cycle/run/-/run-3.4.0.tgz#113844add669ace91d245842522f3733ba5bd393"
+"@cycle/rxjs-run@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@cycle/rxjs-run/-/rxjs-run-8.0.0.tgz#fc5fa54b5a213190d26c08aa032e24fea73d1392"
   dependencies:
-    xstream "10.x || 11.x"
-
-"@cycle/rxjs-run@^7.0.0":
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/@cycle/rxjs-run/-/rxjs-run-7.3.0.tgz#4569902f0c83359182bffc3dc53d9261122561d7"
-  dependencies:
-    "@cycle/run" "3.4"
-    rxjs "5.4.x"
+    "@cycle/run" "4.x"
+    rxjs "5.5.x"
     xstream "11.x"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
@@ -1676,12 +1677,6 @@ crypto-browserify@^3.11.0:
     public-encrypt "^4.0.0"
     randombytes "^2.0.0"
     randomfill "^1.0.3"
-
-cssauron@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/cssauron/-/cssauron-1.4.0.tgz#a6602dff7e04a8306dc0db9a551e92e8b5662ad8"
-  dependencies:
-    through X.X.X
 
 cyclist@~0.2.2:
   version "0.2.2"
@@ -4431,13 +4426,7 @@ rx@4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/rx/-/rx-4.1.0.tgz#a5f13ff79ef3b740fe30aa803fb09f98805d4782"
 
-rxjs@5.4.x:
-  version "5.4.3"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.4.3.tgz#0758cddee6033d68e0fd53676f0f3596ce3d483f"
-  dependencies:
-    symbol-observable "^1.0.1"
-
-rxjs@^5.3.0, rxjs@^5.4.2, rxjs@^5.5.2:
+rxjs@5.5.10, rxjs@5.5.x, rxjs@^5.4.2, rxjs@^5.5.2:
   version "5.5.10"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.10.tgz#fde02d7a614f6c8683d0d1957827f492e09db045"
   dependencies:
@@ -4602,15 +4591,15 @@ slide@^1.1.5:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/slide/-/slide-1.1.6.tgz#56eb027d65b4d2dce6cb2e2d32c4d4afc9e1d707"
 
-snabbdom-selector@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/snabbdom-selector/-/snabbdom-selector-1.2.0.tgz#4260a269d9d46f50b9c1f39da628c2af6828dd53"
+snabbdom-selector@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/snabbdom-selector/-/snabbdom-selector-3.0.0.tgz#787011a5e89e8b1fa2fb768d4bb52a84396714ec"
   dependencies:
-    cssauron "^1.4.0"
+    tree-selector "^1.1.0"
 
-snabbdom@0.6.9:
-  version "0.6.9"
-  resolved "https://registry.yarnpkg.com/snabbdom/-/snabbdom-0.6.9.tgz#65a392f4c82ca7e8ec72aa0d2fa797cf5c73b8d7"
+snabbdom@0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/snabbdom/-/snabbdom-0.7.0.tgz#c09e2baa0f8d43d306a3aa7502b62fdde2b4154e"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
@@ -4916,7 +4905,7 @@ symbol-observable@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.1.tgz#8340fc4702c3122df5d22288f88283f513d3fdd4"
 
-symbol-observable@1.2.0, symbol-observable@^1.0.1, symbol-observable@^1.0.2:
+symbol-observable@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
 
@@ -4969,7 +4958,7 @@ through2@^2.0.0:
     readable-stream "^2.1.5"
     xtend "~4.0.1"
 
-through@X.X.X, through@^2.3.6:
+through@^2.3.6:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
 
@@ -5026,6 +5015,10 @@ to-regex@^3.0.1, to-regex@^3.0.2:
 tree-kill@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/tree-kill/-/tree-kill-1.2.0.tgz#5846786237b4239014f05db156b643212d4c6f36"
+
+tree-selector@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/tree-selector/-/tree-selector-1.1.0.tgz#e47bbb7174b3040328d04da6c80fcabf8819b129"
 
 trim-right@^1.0.1:
   version "1.0.1"
@@ -5383,17 +5376,11 @@ xmlhttprequest-ssl@~1.5.4:
   version "1.5.5"
   resolved "https://registry.yarnpkg.com/xmlhttprequest-ssl/-/xmlhttprequest-ssl-1.5.5.tgz#c2876b06168aadc40e57d97e81191ac8f4398b3e"
 
-"xstream@10.x || 11.x", xstream@11.x:
+"xstream@10.x || 11.x", xstream@11.x, xstream@^11.2.0:
   version "11.2.0"
   resolved "https://registry.yarnpkg.com/xstream/-/xstream-11.2.0.tgz#4acb83211fa2edcd890e36f7a7ed02caee2339b5"
   dependencies:
     symbol-observable "1.2.0"
-
-xstream@^10.5.0:
-  version "10.9.0"
-  resolved "https://registry.yarnpkg.com/xstream/-/xstream-10.9.0.tgz#db7934cec2da01360d43abbbc879b84524397b55"
-  dependencies:
-    symbol-observable "^1.0.2"
 
 xtend@^4.0.0, xtend@~4.0.0, xtend@~4.0.1:
   version "4.0.1"

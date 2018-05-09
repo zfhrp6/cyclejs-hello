@@ -34,8 +34,8 @@ function main(sources: Sources): Sinks {
                 input('.field.form-control', {attrs: {type: 'text'}}),
             ]),
             hr(),
-            h1([`こんにちは ${name}`]),
-            p([name.padStart(20, 'あ')])
+            h1([`Hello ${name}`]),
+            p([name.padStart(20, 'x')])
         ]);
     });
 
