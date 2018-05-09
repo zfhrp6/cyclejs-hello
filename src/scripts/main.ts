@@ -1,5 +1,5 @@
 import {Observable} from 'rxjs';
-import {div, label, input, hr, h1, VNode, makeDOMDriver} from '@cycle/dom';
+import {div, label, input, hr, h1, VNode, makeDOMDriver, p} from '@cycle/dom';
 import {run} from '@cycle/rxjs-run';
 import {DOMSource} from '@cycle/dom/rxjs-typings';
 
@@ -27,14 +27,15 @@ function main(sources: Sources): Sinks {
         .startWith('');
 
     // 現在の状態を画面に描画 ( View )
-    const vdom$: Observable<VNode> = name$.map(name => {
-        return div('.well', [
+    const vdom$: Observable<VNode> = name$.map((name: string) => {
+        return div('.container', [
             div('.form-group', [
                 label('Name: '),
                 input('.field.form-control', {attrs: {type: 'text'}}),
             ]),
             hr(),
-            h1(`Hello ${name}`)
+            h1([`こんにちは ${name}`]),
+            p([name.padStart(20, 'あ')])
         ]);
     });
 

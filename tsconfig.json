@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
+    "target": "ES5",
+    "module": "ES2015",
     "moduleResolution": "node",
     "declaration": false,
     "emitDecoratorMetadata": true,
@@ -15,7 +15,11 @@
     "noEmitOnError": true,
     "strictNullChecks": false,
     "sourceMap": true,
-    "outDir": "public"
+    "outDir": "public",
+    "lib": [
+      "es2017",
+      "dom"
+    ]
   },
   "include": [
     "src/**/*.ts"
