@@ -13,9 +13,10 @@
     "xstream": "^11.2.0"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/polyfill": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "babel-loader": "8.0.0-beta.2",
     "browser-sync": "^2.24.4",
     "concurrently": "^3.5.1",
     "ts-loader": "^4.3.0",
@@ -26,10 +27,11 @@
   "scripts": {
     "reset": "rm -rf public/; mkdir -p public/",
     "copy": "cp src/index.html public/index.html",
-    "script:watch": "NODE_ENV=dev  webpack --progress --colors --config ./webpack.config.js --watch -d",
-    "script:build": "NODE_ENV=prod webpack --progress --colors --config ./webpack.config.js",
+    "script:watch": "NODE_ENV=dev  webpack --progress --colors --config ./bin/webpack.config.js --watch -d",
+    "script:build": "NODE_ENV=prod webpack --progress --colors --config ./bin/webpack.config.js",
+    "script:polyfill": "           webpack --progress --colors --config ./bin/webpack.polyfill.config.js",
     "serv": "browser-sync start -c bs-config.js",
     "start": "yarn reset; yarn copy; concurrently \"yarn script:watch\" \"yarn serv\"",
-    "build": "yarn reset; yarn copy; yarn script:build; ruby -run -e httpd ./public -p 3000"
+    "build": "yarn reset; yarn copy; yarn script:build; yarn script:polyfill; yarn serv"
   }
 }
