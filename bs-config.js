@@ -1,13 +1,13 @@
 module.exports = {
-    "ui": {
-        "port": 3001,
-        "weinre": {
-            "port": 8080
-        }
+  ui: {
+    port: 3001,
+    weinre: {
+      port: 8080,
     },
-    "files": ['public'],
-    "server": {
-        baseDir: './public/'
-    },
-    "port": 3000
+  },
+  files: ['public'],
+  server: {
+    baseDir: './public/',
+  },
+  port: 3000,
 };

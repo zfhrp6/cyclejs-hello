@@ -1,28 +1,35 @@
 {
-  "name": "hello-cyclejs",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:wakamsha/hello-cyclejs.git",
+  "name": "cyclejs-hello",
+  "version": "1.1.0",
+  "repository": "git@github.com:wakamsha/cyclejs-hello.git",
   "author": "wakamsha",
   "license": "MIT",
-  "scripts": {
-    "watch": "bash ./bin/watch.sh"
-  },
   "dependencies": {
-    "@cycle/dom": "^17.1.0",
-    "@cycle/run": "^3.1.0",
-    "@cycle/rxjs-run": "^7.0.0",
-    "rxjs": "^5.3.0",
-    "xstream": "^10.5.0"
+    "@babel/polyfill": "^7.4.4",
+    "@cycle/dom": "^22.3.0",
+    "@cycle/run": "^5.2.0",
+    "@cycle/rxjs-run": "^10.2.0",
+    "rxjs": "^6.5.1",
+    "xstream": "^11.10.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.8",
-    "browserify": "^14.3.0",
-    "gulp": "^3.9.1",
-    "run-sequence": "^1.2.2",
-    "tsify": "^3.0.1",
-    "typescript": "^2.2.2",
-    "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.9.0"
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "babel-loader": "^8.0.5",
+    "browser-sync": "^2.26.5",
+    "npm-run-all": "^4.1.5",
+    "ts-loader": "^5.4.4",
+    "typescript": "^3.4.5",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "yargs": "^13.2.2"
+  },
+  "scripts": {
+    "reset": "rm -rf public/; mkdir -p public/",
+    "copy": "cp src/index.html public/index.html",
+    "script": "webpack --progress --colors",
+    "serve": "browser-sync start -c bs-config.js",
+    "start": "yarn reset; yarn copy; run-p \"script --watch\" serve",
+    "build": "yarn reset; yarn copy; yarn script"
   }
 }
