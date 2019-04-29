@@ -1,37 +1,35 @@
 {
-  "name": "hello-cyclejs",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:wakamsha/hello-cyclejs.git",
+  "name": "cyclejs-hello",
+  "version": "1.1.0",
+  "repository": "git@github.com:wakamsha/cyclejs-hello.git",
   "author": "wakamsha",
   "license": "MIT",
   "dependencies": {
-    "@cycle/dom": "^20.4.0",
-    "@cycle/run": "^4.1.0",
-    "@cycle/rxjs-run": "^8.0.0",
-    "rxjs": "5.5.10",
-    "xstream": "^11.2.0"
+    "@babel/polyfill": "^7.4.4",
+    "@cycle/dom": "^22.3.0",
+    "@cycle/run": "^5.2.0",
+    "@cycle/rxjs-run": "^10.2.0",
+    "rxjs": "^6.5.1",
+    "xstream": "^11.10.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.46",
-    "@babel/polyfill": "^7.0.0-beta.46",
-    "@babel/preset-env": "^7.0.0-beta.46",
-    "babel-loader": "8.0.0-beta.2",
-    "browser-sync": "^2.24.4",
-    "concurrently": "^3.5.1",
-    "ts-loader": "^4.3.0",
-    "typescript": "^2.8.3",
-    "webpack": "^4.8.1",
-    "webpack-cli": "^2.1.3"
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "babel-loader": "^8.0.5",
+    "browser-sync": "^2.26.5",
+    "npm-run-all": "^4.1.5",
+    "ts-loader": "^5.4.4",
+    "typescript": "^3.4.5",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "yargs": "^13.2.2"
   },
   "scripts": {
     "reset": "rm -rf public/; mkdir -p public/",
     "copy": "cp src/index.html public/index.html",
-    "script:watch": "NODE_ENV=dev  webpack --progress --colors --config ./bin/webpack.config.js --watch -d",
-    "script:build": "NODE_ENV=prod webpack --progress --colors --config ./bin/webpack.config.js",
-    "script:polyfill": "           webpack --progress --colors --config ./bin/webpack.polyfill.config.js",
-    "serv": "browser-sync start -c bs-config.js",
-    "start": "yarn reset; yarn copy; concurrently \"yarn script:watch\" \"yarn serv\"",
-    "build": "yarn reset; yarn copy; yarn script:build; yarn script:polyfill; yarn serv"
+    "script": "webpack --progress --colors",
+    "serve": "browser-sync start -c bs-config.js",
+    "start": "yarn reset; yarn copy; run-p \"script --watch\" serve",
+    "build": "yarn reset; yarn copy; yarn script"
   }
 }
