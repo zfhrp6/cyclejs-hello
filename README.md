@@ -25,7 +25,7 @@ $ npm run start`
 
 Node パッケージをインストールします。
 
-```bash
+```bashw
 $ npm install
 ```
 
