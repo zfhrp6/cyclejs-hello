@@ -13,17 +13,21 @@
 
 ### How to use the DEMO
 
-- `npm`コマンドを実行します。
-  `console $ npm run start`
-  `http://localhost:3000` が立ち上がります。
-- 起動中は watch 状態となっており、TypeScript ファイルを編集すると自動でコンパイルが実行されてブラウザがリロードします。
+`npm`コマンドを実行します。
+
+```bash
+$ npm run start`
+```
+
+`http://localhost:3000` が立ち上がります。起動中は watch 状態となっており、TypeScript ファイルを編集すると自動でコンパイルが実行されてブラウザがリロードします。
 
 ## Installation
 
-1. Node パッケージをインストールします。
-   ```console
-   $ npm install
-   ```
+Node パッケージをインストールします。
+
+```bash
+$ npm install
+```
 
 ## Author
 
