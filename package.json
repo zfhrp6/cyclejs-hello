@@ -29,7 +29,7 @@
     "copy": "cp src/index.html public/index.html",
     "script": "webpack --progress --colors",
     "serve": "browser-sync start -c bs-config.js",
-    "start": "yarn reset; yarn copy; run-p \"script --watch\" serve",
-    "build": "yarn reset; yarn copy; yarn script"
+    "start": "npm run reset; npm run copy; run-p \"script --watch\" serve",
+    "build": "npm run reset; npm run copy; npm run script"
   }
 }
